@@ -1,0 +1,324 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:root{
+    --body: orange;
+    --black: black;
+    --white: white;
+}
+a{
+    text-decoration: none;
+}
+*::before, *::after{
+    overflow-x:hidden;
+}
+html{
+    overflow-x:hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 65.5%;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 4rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    background: rgb(255, 255, 255, 0.12);
+    transition: all 500ms ease-in-out;
+    transition-timing-function: 5% 10% linear;
+}
+header.sticky{
+    position: fixed;
+    background: var(--white);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header.sticky ul li a{
+    font-weight: 400;
+    color: var(--black);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.logo ion-icon{
+    color: var(--body);
+    font-size: 3.5rem;
+}
+.logo h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+.nav ul li a{
+    margin-left: 2.8rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--white);
+}
+.nav ul li a.active {
+    color: var(--body);
+}
+/* SWIPERJS CSS */
+.swiper {
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.banner{
+      position: relative;
+      width: 100%;
+  }
+.slide-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.slide-text h1{
+    font-size: 5rem;
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.slide-text p{
+    font-size: 2.0rem;
+    color: var(--white);
+    font-weight: 300;
+    line-height: 2.7rem;
+}
+
+
+.swiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  .swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-pagination-bullet{
+      background: var(--body);
+  }
+
+  /* nav links */
+  .nav-link{
+      position: absolute;
+      top: 80%;
+      left: 8%;
+      z-index: 3;
+  }
+  .nav-links  a.btn1{
+      background:darkgreen;
+  }
+  .nav-links  a.btn2{
+    background:purple;
+}
+.nav-links  a.btn4{
+    background:rgb(22, 0, 100);
+}
+  .nav-link a{
+      margin-left: 3.0rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--white);
+      background: var(--body);
+      padding: 15px 30px ;
+      border-radius: .5rem;
+      border: none;
+      outline: none;
+  }
+
+  /* feature section */
+  .feature{
+      width: 100%;
+      position: relative;
+      margin: 80px 0 40px;
+      padding: 5rem 8%;
+  }
+  .features{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .feature-one{
+      flex-basis: 30%;
+  }
+  .feature-one h1{
+    font-size: 2.1rem;
+    font-weight: 400;
+    color: var(--body);
+    margin-bottom: .5rem;
+}
+.feature-one p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: .5rem;
+    line-height: 2.5rem;
+}
+
+/* copyright */
+.copyright{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top: .2rem solid rgb(231, 226, 226);
+    padding: 3rem 8%;
+}
+.copyinfo p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #444;
+}
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 991px){
+    html{
+        font-size: 57%;
+        overflow-x:hidden;
+    }
+    header{
+        padding: 4rem 5%;
+}
+    .banner{
+        height: 100vh;
+        margin-bottom: 50px;
+    }
+    .nav-links{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .nav-link{
+        top: 70%;
+    }
+    .nav-link a {
+        margin-left: none;
+        padding: 12px 20px;
+    }
+    /* show nav active */
+    .nav.active{
+        width:200px;
+    }
+    .nav{
+        background: darkgreen;
+        position:absolute;
+        top: 70px;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        transition: all 500ms ease-in-out;
+        overflow-x:hidden;
+        border-top-left-radius: 5rem;
+    }
+    .nav ul li{
+        display: block;
+        margin-top: 5rem;
+    }
+    .nav ul li a{
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    .toggle ion-icon{
+        font-size: 5rem;
+        color: var(--body);
+    }
+    .toggle.active .navbtn{
+        display: none;
+    }
+    .toggle span{
+        display:none;
+    }
+    .toggle.active span{
+        display: block;
+    }
+    .nav-link a{
+        padding: 16px 40px;
+    }
+}
+@media (max-width: 567px){
+   
+    .nav-links{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features{
+        flex-direction: column;
+    }
+    .html{
+        font-size: 60%;
+    }
+    .nav-link{
+        top: 70%;
+    }
+    .nav-link a {
+        margin-left:0;
+        padding: 12px 20px;
+    }
+}
+
+@media (min-width: 1200px){
+    .toggle{
+        display: none;
+    }
+}
+
+
+@media (max-width: 367px){
+   
+    .nav-links{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .slide-text {
+        top: 35%;
+    }
+    .slide-text h1 {
+        font-size: 3rem;
+    }
+    .nav-link{
+        top: 50%;
+    }
+    .nav-link a{
+        padding: 12px 50px;
+        margin:0;
+    }
+}
+    

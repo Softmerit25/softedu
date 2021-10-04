@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEdu - Educational Website</title>
+    <!--Swiperjs Link-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!-------Google Fonts Link-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+<!--Main Stylesheet Link-->
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+      <div class="logo">
+        <ion-icon name="book-outline"></ion-icon>
+      <h1>My<span>Edu</span></h1>
+    </div>
+    <div class="nav">
+        <ul>   
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">How to apply</a></li>
+            <li><a href="#">How to register</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+    <div class="toggle"><ion-icon name="menu-outline" class="navbtn"></ion-icon><span><ion-icon name="close-outline"></ion-icon></span></div>
+    
+  </header>  
+
+      <!-- Slider main container -->
+    <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+          <div class="banner">
+        <img src="imgs/pix1.jpg" alt="pix 1">
+        <div class="slide-text">
+        <h1> Applications are Open </h1>
+        <p>Lorem ipsum dolor sit amet consectetur <br> Temporibus animi fuga, dolorum optio neque.</p>
+        </div>
+</div>
+</div>
+      <div class="swiper-slide">
+        <div class="banner">
+        <img src="imgs/pix2.jpg" alt="pix 2">
+        <div class="slide-text">
+            <h1> Join the <br>Green Teacher Programme</h1>
+            <p>Lorem ipsum dolor sit amet consectetur <br> Temporibus animi fuga, dolorum optio neque.</p>
+        </div></div></div>
+      <div class="swiper-slide">
+        <div class="banner">
+         <img src="imgs/pix3.jpg" alt="pix 2">
+         <div class="slide-text">
+            <h1> Apply to MyEdu <br> using the Mobile<br>  App.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+
+<!----BUTTON LINKS-->
+    <div class="nav-link">
+        <div class="nav-links">
+            <a href="#" class="btn1">Continue Application</a>
+            <a href="#" class="btn2">New Registration</a>
+            <a href="#" class="btn3">External Services</a>
+            <a href="#" class="btn4">Download our App</a>
+        </div>
+    </div>
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+
+<!--Features-->
+<div class="feature">
+    <div class="features">
+    <div class="feature-one">
+        <h1>New Student Application Guide</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi fuga, dolorum optio neque totam vitae nam alias autem sint?</p>
+    </div>
+    <div class="feature-one">
+        <h1>Current Students Registration Guide</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi fuga, dolorum optio neque totam vitae nam alias autem sint?</p>
+    </div>
+    <div class="feature-one">
+        <h1>Important Dates & School Calendar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi fuga, dolorum optio neque totam vitae nam alias autem sint?</p>
+    </div>
+</div>    
+</div>
+
+<!----Copyright-->
+<div class="copyright">
+    <div class="copyinfo">
+        <p>Copyright © 2021 MyEdu. All rights reserved. Coded by SoftMerit</p>
+    </div>
+</div>
+
+
+  <!--Swiperjs Script-->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--IONICONS LINK-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="app.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay:{
+          delay: 7000,
+          disableOnInteraction: false,
+      },
+      keyboard: {
+          enabled: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
